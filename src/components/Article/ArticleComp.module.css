@@ -1,0 +1,131 @@
+.largeArticle, .smallArticle {
+  width: 100%;
+  margin: 0px auto 1.25em auto;
+  padding-bottom: 0.625em;
+  border-bottom: 3px solid #600f0c;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  box-shadow: 1px 1px 8px grey;
+  
+}
+
+.largeArticle:hover, .smallArticle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.smallArticle {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0.625em 1.25em 0.625em;
+}
+
+.smallArticle .articleContent {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.smallArticle .imageContainer {
+  width: 50%;
+}
+
+.smallArticle .shortDescription {
+  margin-left: 10px;
+  width: 66%
+}
+
+.smallArticle .articleHeader {
+  font-size: clamp(1.2em, 5vw, 1.8em);
+}
+
+.largeArticle .articleContent {
+  padding: 0.625em;
+}
+
+.articleImg {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.articleHeader {
+  font-size: 1.625em;
+  word-break: break-word;
+  margin-top: 0;
+  margin-bottom: 0.425em;
+}
+
+.shortDescription {
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.articleTags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 0.625em;
+}
+
+.articleTag {
+  padding: 5px 10px;
+  color: #ffffff;
+  background-color: #600f0c;
+  border-radius: 0.625em;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.articleTag:hover {
+  background-color: #E82C25;
+}
+
+.adminButtons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.deleteArticleBtn, .editArticleBtn {
+  background: rgb(211, 211, 211);
+  border-radius: 50%;
+  padding: 10px;
+  border: none;
+  font-size: 1.4em;
+  cursor: pointer;
+}
+
+.editingContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.noPayingMainText {
+  position: relative;
+}
+
+.subscribeNotif {
+  margin-top: 0.625em;
+}
+
+.subscribeNotif > a {
+  color: #E82C25;
+}
+
+
+/* Media query phone / computer view */
+
+@media (min-width: 1024px){
+  .largeArticle, .smallArticle{
+    width: 50%;
+    box-shadow: 2px 2px 13px grey;
+  }  
+  .openedArticle {
+    width: 60% !important;
+  }
+}

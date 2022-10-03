@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+
+.footer {
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: #600f0c;
+color: white;
+font-family: 'Playfair Display', serif;
+padding-bottom: 20px;
+margin-top: 0px;
+padding-top: 0.1px;
+}
+
+.footerContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.footerHead> h3 {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 10px 20px;
+}
+
+.footerLinks {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    font-size: 16px; 
+    border-bottom: 1px solid white;
+    padding-bottom: 20px;
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
+.footerLinkLeft, .footerLinkRight {
+    width: 100%;
+}
+
+.footerLinkLeft p, .footerLinkRight p {
+    cursor: pointer;
+}
+
+.imgPosition{
+    height:8.25em;
+    display: flex;
+    justify-content: center; 
+    padding-top: 1.25em;
+    padding-bottom: 1.25em;
+    background: #e0c1c1;
+    margin-bottom: 2em;
+}
+
+.imgPosition img{
+    height: 100%;
+    cursor: pointer; 
+}
+
+/* social media */
+
+.footerLinkMedia {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 15px;
+    text-align: left;
+    margin-left: 3em;
+    margin-right: 3em;
+
+}
+
+.footerLinkMedia> svg {
+    width: 10%;
+    cursor: pointer;
+}
+
+/* Media querys phone / computer views */
+
+@media (min-width: 560px) {
+    .footerContent {
+        flex-direction: row;
+    }
+
+    .footerLinks {
+        border-bottom: none;
+        border-right: 1px solid white;
+        padding-bottom: 0;
+    }
+    .footerContent>div {
+        width: 100%;
+        padding-left: 20px;
+    }
+    
+    
+}

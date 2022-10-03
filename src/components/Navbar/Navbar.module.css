@@ -1,0 +1,234 @@
+/* Regular left hand side navbar */
+.navbar {
+  height: 100vh;
+  padding: 0.625em;
+  width: 100%;
+  max-width: 100vw;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #a82222;
+  box-shadow: 2px 2px 4px #dedede;
+  z-index: 2;
+  transform: translateX(102%);
+  transition: transform 0.5s ease;
+}
+
+/* When navbar is opened */
+.navbar.opened {
+  transform: translateX(0);
+}
+
+.navBarContainer {
+  z-index: 1;
+}
+
+.headers {
+  cursor: pointer;
+  border-bottom: 0.2em solid #600f0c;
+  border-top: 0.2em solid #600f0c;
+  padding: 10px;
+  margin: 0;
+}
+
+.link {
+  color: #000000;
+  text-decoration: none;
+  font-size: 1.4em;
+  font-weight: bold;
+  padding: 1em;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* The dark background shown behind the navbar when its open */
+.navbarDarkBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: #6a6a6a66;
+  z-index: 1;
+}
+
+/* The "hamburger" button */
+.openNavbarBtn {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  top: -2.5px;
+  right: -2.5px;
+  border: none;
+  background: #600f0c;
+  border-bottom-left-radius: 15px;
+  width: 20%;
+  height: 4%;
+  max-width: 130px;
+  min-width: 100px;
+  text-shadow: 3px 3px 5px rgb(30, 30, 30);
+  color: rgb(30, 30, 30);
+  font-size: 2em;
+  font-stretch: expanded;
+  cursor: pointer;
+  padding: 5px 0;
+}
+
+.openNavbarBtn:hover .hamburger1{
+	animation: pulse 1.8s infinite;
+}
+.openNavbarBtn:hover .hamburger2{
+	animation: pulse 1.8s infinite;
+  animation-delay: 0.2s;
+}
+.openNavbarBtn:hover .hamburger3{
+	animation: pulse 1.8s infinite;
+  animation-delay: 0.4s;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(0.85);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+.hamburger1, .hamburger2, .hamburger3{
+  background: #f5f5f5;
+  flex-direction: column;
+  width: 45%;
+  height: 1px;
+  border: solid 1.5px rgb(255, 255, 255);
+}
+
+/* The subscribe button in the top left */
+.subscribeBtn {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -2.5px;
+  left: -2.5px;
+  background: #600f0c;
+  border-bottom-right-radius: 15px;
+  width: 20%;
+  height: 4%;
+  max-width: 130px;
+  min-width: 100px;
+  font-size: 1em;
+  font-stretch: expanded;
+  cursor: pointer;
+  z-index:3;
+  border: none;
+  color: #f5f5f5; 
+}
+
+.closeNavbarBtn {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -2.5px;
+  right: -2.5px;
+  border: none;
+  background: #600f0c;
+  border-bottom-left-radius: 15px;
+  width: 20%;
+  height: 4%;
+  max-width: 140px;
+  min-width: 90px;
+  font-size: 2em;
+  font-stretch: expanded;
+  cursor: pointer;
+  color: #f5f5f5; 
+}
+
+.searchPart {
+  position: relative;
+  width: 100%;
+}
+
+.searchPart > input {
+  width: 100%;
+  font-size: 1.1em;
+  padding: 0.6em 2.5em 0.6em 0.6em;
+}
+
+.searchPart > button {
+  position: absolute;
+  top: 50%;
+  right: 0.8em;
+  transform: translateY(-50%);
+  border: none;
+  background-color: transparent;
+  font-size: 1em;
+  padding: 0;
+  cursor: pointer;
+}
+
+.linksPart {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly;
+  flex-grow: 1; */
+  margin-bottom: 10px;
+}
+
+.upperPart > *, .userAndSearchPart > * {
+  margin-top: 10px;
+}
+
+.login {
+  border: 1px solid black;
+  box-shadow: rgba(0, 1, 2, 25%);
+  background-color: #600f0c;
+  border-radius: 0.25em;
+  cursor: pointer;
+  transition: 0.3s all ease;
+  margin: 1.25em;
+  color: white; 
+}
+
+.login:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+@media (min-width:1024px){
+  .searchPart {
+    position: relative;
+    width: 100%;
+  }
+  
+  .searchPart > input {
+    width: 40%;
+    font-size: 1.25em;
+    padding: 0.6em 2.5em 0.6em 0.6em;
+    border-radius: 1em;
+  }
+
+  .searchPart > button {
+    visibility: hidden;
+  }
+
+  .login {
+    border-radius: 1.25em;
+    margin: 1.25em;
+    height: 2em;
+    width: 8%;
+  }
+}

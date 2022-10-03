@@ -1,0 +1,156 @@
+h1 {
+  text-align: center;
+  margin: 0;
+  padding: 32px;
+}
+
+.subscribePage {
+  background-color: #F5F5F5;
+  color: #000000;
+}
+
+.subscribeHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 0.2em #600f0c solid;
+}
+
+.subscribeHeader > h4 {
+  margin: 1.25em;
+}
+
+.subscribeBtn {
+  width: 80%;
+  padding: 20px;
+  font-size: 1.2em;
+  border-radius: 0.625em;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: rgb(255, 255, 255) ;
+  border: none;
+  background-color: #000000;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.subscribeCard {
+  background: #390907;
+  margin:20px auto;
+  position: relative;
+  width: 70%;
+  height: 0;
+  padding: 25% 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.75);
+  transition: all 0.3s;
+}
+
+.subscribeCardContent {
+  text-align: center;
+  text-shadow: 10px 10px 20px black;
+}
+
+.highlightedSubscribeCard {
+  border: 1px solid white;
+  box-shadow: 2px 2px 8px black;
+  border-radius: 10px;
+}
+
+.subscribeCard:hover {
+  background-color: #3e1615;
+}
+
+.subscribeCard:active {
+  background-color: #6e5857;
+}
+
+.subscribeBtn:hover {
+  background-color: #E82C25;
+}
+
+.subscribeBtn:active {
+  background-color: white;
+}
+
+.subscribeInfo {
+  text-align: center;
+}
+
+.subscribeList {
+  list-style: none;
+  padding: 0;
+}
+
+.subscribeList li {
+  padding: 10px;
+}
+
+.cardMenu {
+  background-color: #ebebeb;
+  /* box-shadow: 2px 2px 4px gray inset; */
+  max-height: 0px;
+  animation: openUp 0.5s forwards;
+  overflow: hidden;
+  padding: 10px;
+}
+
+@keyframes openUp {
+  0% {
+    max-height: 0px;
+  }
+  100% {
+    max-height: 1000px;
+  }
+}
+
+@media (min-width:1024px){
+  .subscribeBtn {
+    width: 30%;
+    font-size: 24px;
+    border-radius: 2em;
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 15px 10px;
+    margin:20px 0 0;
+  }
+
+  .subscribeCard {
+    background: #390907;
+    margin:1.25em auto;
+    position: relative;
+    width: 50%;
+    padding: 10% ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.75);
+    transition: all 0.3s;
+  }
+
+  .highlightedSubscribeCard {
+    border: 1px solid white;
+    box-shadow: 2px 2px 8px black;
+    border-radius: 10px;
+  }
+}

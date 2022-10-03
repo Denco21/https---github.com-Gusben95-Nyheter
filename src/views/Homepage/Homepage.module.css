@@ -1,0 +1,91 @@
+.p{
+  color: black; 
+}
+.homepage {
+  background: #efe1e1;   /* #600F0C; */
+  background: linear-gradient(180deg,#ffffff 50%, rgba(0, 0, 0, 0.057));
+  /* background: rgb(0, 0, 0); */
+  /* background: linear-gradient(180deg, rgba(0, 0, 0, 1) 4%, rgba(96, 15, 12, 1) 6%); */
+}
+
+.title {
+  text-align: center;
+  margin-top: 0;
+  padding-top: 1em;
+  background-color: #ffffff;
+  margin: 0;
+  cursor: pointer;
+}
+
+.superAd {
+  display: flex;
+  text-align: center;
+  padding: 10px;
+  padding-bottom: 3em;
+  background: rgb(255, 255, 255);
+
+  color: rgb(0, 0, 0);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.225em;
+}
+
+.superAd a {
+  background-color: #600f0c;
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  border-radius: 1em;
+  text-decoration: none;
+  font-size: 1.5em;
+  margin-top: 20px;
+  cursor: pointer;
+  box-shadow: rgba(0, 1, 2, 25%);
+  display: block;
+  width: 60%;
+}
+
+.Login a {
+  width: 100%;
+  
+}
+
+.superAd a:hover {
+  background-color: #000000;
+}
+
+.adText{
+  display: flex;
+  flex-direction:column;
+}
+
+.toTheTop {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  bottom: 10px;
+  right: 10px;
+  border-bottom-left-radius: 15px;
+  color: rgb(75, 75, 75);
+  font-size: 2em;
+  font-stretch: expanded;
+  cursor: pointer;
+  padding: 5px 0;
+}
+
+
+@media (min-width:1024px) {
+  .superAd a {
+    width:30%;
+    border-radius: 1em
+  }
+ 
+  .Login a {
+    width: 110%;
+    border-radius: 1em;
+    justify-items: center;
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,22 @@
+.header {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding-bottom: 2em;
+  padding-top: 2em;
+}
+
+.headerImg {
+  height: 100%;
+}
+
+@media (min-width: 1024px){
+  .header{
+    
+    height: 15em;
+    
+  }
+}
